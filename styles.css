@@ -1,0 +1,196 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;  /* Default text color is white */
+  line-height: 1.6;
+  padding: 0 20px;
+  background-color: #000000; /* Black background */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Page-Specific Backgrounds */
+.home-page {
+  background-image: url('images/home-bg.png');
+}
+
+.about-page {
+  background-image: url('images/about-bg.png');
+}
+
+.contact-page {
+  background-image: url('images/contact-bg.png');
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff0000; /* Red color for the logo */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* White color for navbar links */
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ff0000; /* Red color when hovered */
+}
+
+/* Hero Section (Home Page Only) */
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  color: white;
+  overflow: hidden;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ff0000; /* Red color for main heading */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 10px 25px;
+  background: #ff0000; /* Red background for button */
+  color: #ffffff; /* White color for text in button */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #000000; /* Yellow color on hover for better contrast */
+}
+
+/* Sections (About, Contact) */
+.section,
+.credits,
+.contact {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* Typography */
+h1, h2 {
+  margin-bottom: 20px;
+  color: #ff0000; /* Red color for headings */
+  text-align: center;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #ffffff; /* White color for paragraph text */
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Contact Specific Styles */
+.contact a {
+  color: #ff0000; /* Red color for contact links */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.95rem;
+  }
+}
